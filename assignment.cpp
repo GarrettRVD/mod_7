@@ -13,6 +13,8 @@ private:
 public:
     Counter():count(0)          // constructor
     {};
+    Counter(int c):count(c)     // constructor with one argument
+    {};
 
     unsigned int get_count()    // returns count
     {
@@ -23,10 +25,7 @@ public:
     {
         ++count;                // increment prefix
 
-        Counter temp;
-        temp.count = count;
-
-        return temp;
+        return Counter(count);
     }
 
 };
